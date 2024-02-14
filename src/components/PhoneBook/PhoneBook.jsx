@@ -10,6 +10,7 @@ import ContactForm from '../ContactForm/ContactForm';
 import ContactList from '../ContactList/ContactList';
 import Filter from '../Filter/Filter';
 import style from './PhoneBook.module.css';
+import Loader from 'components/Loader/Loader';
 
 const PhoneBook = () => {
   const items = useSelector(selectContacts);
@@ -31,7 +32,7 @@ const PhoneBook = () => {
           Your phonebook is empty. Add first contact!
         </div>
       )}
-      {isLoading && <p>...Loading</p>}
+      {isLoading && <Loader />}
       {error && <p>{error}</p>}
       {items && items.length > 0 && <ContactList />}
     </div>
