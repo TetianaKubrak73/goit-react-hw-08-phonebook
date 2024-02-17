@@ -1,7 +1,8 @@
+import styles from './Home.module.css';
 export default function Home() {
   return (
-    <div style={styles.container}>
-      <h1 style={styles.title}>
+    <div className={styles.container}>
+      <h1 className={styles.title}>
         Welcome to Phonebook!{' '}
         <span role="img" aria-label="Phone icon">
           ☎️

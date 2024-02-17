@@ -13,5 +13,5 @@
 }
 
 .link:global(.active) {
-  color: blue;
+  font-weight: bold;
 }
