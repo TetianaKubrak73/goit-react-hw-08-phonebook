@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgoit_react_hw_08_phonebook=self.webpackChunkgoit_react_hw_08_phonebook||[]).push([[344],{344:function(e,o,n){n.r(o),n.d(o,{default:function(){return i}});var c="Home_container__j1Eze",t="Home_title__FBeIP",a=n(184);function i(){return(0,a.jsx)("div",{className:c,children:(0,a.jsxs)("h1",{className:t,children:["Welcome to Phonebook!"," ",(0,a.jsx)("span",{role:"img","aria-label":"Phone icon",children:"\u260e\ufe0f"})]})})}}}]);
+//# sourceMappingURL=344.c0e0a022.chunk.js.map
