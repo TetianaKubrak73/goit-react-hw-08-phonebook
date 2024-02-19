@@ -19,7 +19,7 @@ const ContactList = () => {
     <ul className={style.list}>
       {visibleContacts.map(contact => (
         <li key={contact.id}>
-          {contact.name + ' : ' + contact.phone}
+          {contact.name + ' : ' + contact.number}
           <button
             type="button"
             name="delete"

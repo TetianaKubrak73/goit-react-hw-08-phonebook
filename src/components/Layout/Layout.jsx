@@ -8,7 +8,7 @@ import Loader from '../Loader/Loader';
 export const Layout = () => {
   return (
     <div className={styles.box}>
-      <AppBar />{' '}
+      <AppBar />
       {/*Виводимо компонент AppBar, який містить навігаційну панель */}
       <Suspense fallback={<Loader />}>
         <Outlet />

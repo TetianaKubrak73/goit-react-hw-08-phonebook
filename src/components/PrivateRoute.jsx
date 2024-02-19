@@ -1,10 +1,11 @@
 import { useAuth } from '../hooks/useAuth';
 import { Outlet, Navigate } from 'react-router-dom';
+import Loader from './Loader/Loader';
 
 export const PrivateRoute = () => {
   const { isLogin, token } = useAuth();
   if (!isLogin && token) {
-    return <p>...Loading</p>;
+    return <Loader />;
   }
 
   if (!isLogin && !token) {

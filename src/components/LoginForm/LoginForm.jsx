@@ -1,30 +1,15 @@
-// import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useState, useId } from 'react';
-// import { login } from '../../redux/auth/auth-operations';
+import { login } from '../../redux/auth/auth-operations';
 import styles from './LoginForm.module.css';
-
-// export const LoginForm = () => {
-//   const dispatch = useDispatch();
-
-//   const handleSubmit = e => {
-//     e.preventDefault();
-//     const form = e.currentTarget;
-//     dispatch(
-//       login({
-//         email: form.elements.email.value,
-//         password: form.elements.password.value,
-//       })
-//     );
-//     form.reset();
-//   };
 
 const INITIAL_STATE = {
   email: '',
   password: '',
 };
-const LoginForm = ({ onSubmit }) => {
+const LoginForm = () => {
   const [state, setState] = useState({ ...INITIAL_STATE });
-
+  const dispatch = useDispatch();
   const handleChange = ({ target }) => {
     const { name, value, type, checked } = target;
     const newValue = type === 'checkbox' ? checked : value;
@@ -37,7 +22,7 @@ const LoginForm = ({ onSubmit }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    onSubmit({ ...state });
+    dispatch(login(state));
     reset();
   };
 
@@ -74,7 +59,9 @@ const LoginForm = ({ onSubmit }) => {
           required
         />
       </label>
-      <button type="submit">LogIn</button>
+      <button className={styles.button} type="submit">
+        LogIn
+      </button>
     </form>
   );
 };

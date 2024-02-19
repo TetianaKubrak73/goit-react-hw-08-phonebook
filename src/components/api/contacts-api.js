@@ -1,8 +1,4 @@
-// import axios from 'axios';
 import authInstance from './auth-api';
-// const contactsInstance = axios.create({
-//   baseURL: 'https://https://connections-api.herokuapp.com//contacts',
-// });
 
 export const requestFetchContacts = async () => {
   const { data } = await authInstance.get('/contacts');

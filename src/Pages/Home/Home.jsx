@@ -4,9 +4,9 @@ export default function Home() {
     <div className={styles.container}>
       <h1 className={styles.title}>
         Welcome to Phonebook!{' '}
-        <span role="img" aria-label="Phone icon">
+        {/* <span role="img" aria-label="Phone icon">
           ☎️
-        </span>
+        </span> */}
       </h1>
     </div>
   );

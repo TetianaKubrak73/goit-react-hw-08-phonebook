@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { useAuth } from '../../hooks/useAuth';
+import { useAuth } from '../../../hooks/useAuth';
 import styles from './NavMenu.module.css';
 
 const NavMenu = () => {
@@ -13,7 +13,7 @@ const NavMenu = () => {
       </li>
       <li>
         {isLogin && (
-          <NavLink className={styles.link} to="/contacts">
+          <NavLink className={styles.link} to="/Contacts">
             Contacts
           </NavLink>
         )}

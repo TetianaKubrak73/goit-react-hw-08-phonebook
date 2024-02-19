@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import { signup, login, current, logout } from './auth-operations';
 
 const initialState = {
-  user: { name: null, email: null },
+  user: {},
   token: '',
   isLogin: false,
   isLoading: false,
@@ -43,8 +43,8 @@ const authSlice = createSlice({
       .addCase(login.rejected, rejected)
       .addCase(current.pending, pending)
       .addCase(current.fulfilled, (state, { payload }) => {
-        state.user = payload.user;
-        state.token = payload.token;
+        state.user = payload;
+        // state.token = payload.token;
         state.isLogin = true;
         state.isLoading = false;
         state.error = null;
