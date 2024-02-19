@@ -20,7 +20,7 @@ const Login = () => {
   };
 
   if (isLogin) {
-    return <Navigate to="/Contacts" />;
+    return <Navigate to="/contacts" />;
   }
 
   return (

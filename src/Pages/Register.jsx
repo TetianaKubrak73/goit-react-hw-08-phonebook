@@ -21,7 +21,7 @@ const Register = () => {
     dispatch(signup(data));
   };
   if (isLogin) {
-    return <Navigate to="/Contacts" />;
+    return <Navigate to="/contacts" />;
   }
   return (
     <div>
