@@ -1,5 +1,8 @@
 import { useAuth } from '../hooks/useAuth';
-import { Outlet, Navigate } from 'react-router-dom';
+import {
+  // Outlet,
+  Navigate,
+} from 'react-router-dom';
 import Loader from './Loader/Loader';
 
 export const PrivateRoute = () => {
@@ -12,7 +15,7 @@ export const PrivateRoute = () => {
     return <Navigate to="/login" />;
   }
 
-  return <Outlet />;
+  //   return <Outlet />;
 };
 
 export default PrivateRoute;
