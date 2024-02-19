@@ -2,26 +2,26 @@ import { useSelector, useDispatch } from 'react-redux';
 import {
   selectAuthError,
   selectAuthLoading,
-  //   selectIsLogin,
+  selectIsLogin,
 } from '../redux/auth/auth-selectors';
 import { login } from '../redux/auth/auth-operations';
 import LoginForm from '../components/LoginForm/LoginForm';
-// import { Navigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import Loader from 'components/Loader/Loader';
 
 const Login = () => {
   const authLoading = useSelector(selectAuthLoading);
   const authError = useSelector(selectAuthError);
-  //   const isLogin = useSelector(selectIsLogin);
+  const isLogin = useSelector(selectIsLogin);
 
   const dispatch = useDispatch();
   const handleLogin = data => {
     dispatch(login(data));
   };
 
-  //   if (isLogin) {
-  //     return <Navigate to="/Contacts" />;
-  //   }
+  if (isLogin) {
+    return <Navigate to="/Contacts" />;
+  }
 
   return (
     <div>

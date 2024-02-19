@@ -65,7 +65,7 @@ const RegisterForm = () => {
             type="email"
             name="email"
             placeholder="Введіть адресу електронної пошти"
-            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+            // pattern="^[a-zA-Zа-яА-Я]+(([' \-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
             required
           />
         </label>
@@ -80,7 +80,7 @@ const RegisterForm = () => {
             type="password"
             name="password"
             placeholder="Введіть пароль"
-            pattern="^[a-zA-Z0-9!@#$%^&*()-_=+`~[\]{}|:<>/?]+$"
+            // pattern="^[a-zA-Z0-9!@#$%^&*()-_=+`~[\]{}|:<>/?]+$"
             required
           />
         </label>
